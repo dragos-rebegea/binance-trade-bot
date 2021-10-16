@@ -1,6 +1,6 @@
 from sqlalchemy import Boolean, Column, String
 
-from .base import Base
+from binance_trade_bot.models.base import Base
 
 
 class Coin(Base):

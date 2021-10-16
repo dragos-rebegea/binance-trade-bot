@@ -2,9 +2,9 @@
 import configparser
 import os
 
-from .models import Coin
+from models import Coin
 
-CFG_FL_NAME = "user.cfg"
+CFG_FL_NAME = "C:/Users/DRebegea/Documents/trust/binance-trade-bot/user.cfg"
 USER_CFG_SECTION = "binance_user_config"
 
 
@@ -18,6 +18,7 @@ class Config:  # pylint: disable=too-few-public-methods,too-many-instance-attrib
             "scout_sleep_time": "5",
             "hourToKeepScoutHistory": "1",
             "tld": "com",
+            "testnet": True,
             "strategy": "default",
             "sell_timeout": "0",
             "buy_timeout": "0",
@@ -49,6 +50,7 @@ class Config:  # pylint: disable=too-few-public-methods,too-many-instance-attrib
         self.BINANCE_API_KEY = os.environ.get("API_KEY") or config.get(USER_CFG_SECTION, "api_key")
         self.BINANCE_API_SECRET_KEY = os.environ.get("API_SECRET_KEY") or config.get(USER_CFG_SECTION, "api_secret_key")
         self.BINANCE_TLD = os.environ.get("TLD") or config.get(USER_CFG_SECTION, "tld")
+        self.BINANCE_TESTNET = os.environ.get("testnet") or config.get(USER_CFG_SECTION, "testnet")
 
         # Get supported coin list from the environment
         supported_coin_list = [

@@ -4,8 +4,8 @@ from datetime import datetime
 from sqlalchemy import Boolean, Column, DateTime, Enum, Float, ForeignKey, Integer, String
 from sqlalchemy.orm import relationship
 
-from .base import Base
-from .coin import Coin
+from binance_trade_bot.models.base import Base
+from binance_trade_bot.models.coin import Coin
 
 
 class TradeState(enum.Enum):

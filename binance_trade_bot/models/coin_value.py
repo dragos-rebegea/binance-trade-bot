@@ -5,8 +5,8 @@ from sqlalchemy import Column, DateTime, Enum, Float, ForeignKey, Integer, Strin
 from sqlalchemy.ext.hybrid import hybrid_property
 from sqlalchemy.orm import relationship
 
-from .base import Base
-from .coin import Coin
+from binance_trade_bot.models.base import Base
+from binance_trade_bot.models.coin import Coin
 
 
 class Interval(enum.Enum):

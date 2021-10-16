@@ -1,3 +1,3 @@
-from .backtest import backtest
-from .binance_api_manager import BinanceAPIManager
-from .crypto_trading import main as run_trader
+from backtest import backtest
+from binance_trade_bot.binance_api_manager import BinanceAPIManager
+from binance_trade_bot.crypto_trading import main as run_trader

@@ -7,11 +7,11 @@ from binance.client import Client
 from binance.exceptions import BinanceAPIException
 from cachetools import TTLCache, cached
 
-from .binance_stream_manager import BinanceCache, BinanceOrder, BinanceStreamManager, OrderGuard
-from .config import Config
-from .database import Database
-from .logger import Logger
-from .models import Coin
+from binance_trade_bot.binance_stream_manager import BinanceCache, BinanceOrder, BinanceStreamManager, OrderGuard
+from binance_trade_bot.config import Config
+from binance_trade_bot.database import Database
+from binance_trade_bot.logger import Logger
+from models import Coin
 
 
 class BinanceAPIManager:
@@ -21,6 +21,7 @@ class BinanceAPIManager:
             config.BINANCE_API_KEY,
             config.BINANCE_API_SECRET_KEY,
             tld=config.BINANCE_TLD,
+            testnet=bool(config.BINANCE_TESTNET),
         )
         self.db = db
         self.logger = logger

@@ -5,15 +5,15 @@ from typing import Dict
 
 from sqlitedict import SqliteDict
 
-from .binance_api_manager import BinanceAPIManager
-from .binance_stream_manager import BinanceOrder
-from .config import Config
-from .database import Database
-from .logger import Logger
-from .models import Coin, Pair
-from .strategies import get_strategy
+from binance_trade_bot.binance_api_manager import BinanceAPIManager
+from binance_stream_manager import BinanceOrder
+from binance_trade_bot.config import Config
+from binance_trade_bot.database import Database
+from binance_trade_bot.logger import Logger
+from binance_trade_bot.models import Coin, Pair
+from strategies import get_strategy
 
-cache = SqliteDict("data/backtest_cache.db")
+cache = SqliteDict("C:/Users/DRebegea/Documents/trust/binance-trade-bot/data/backtest_cache.db")
 
 
 class MockBinanceManager(BinanceAPIManager):

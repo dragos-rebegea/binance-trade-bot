@@ -10,13 +10,13 @@ from socketio.exceptions import ConnectionError as SocketIOConnectionError
 from sqlalchemy import create_engine, func
 from sqlalchemy.orm import Session, scoped_session, sessionmaker
 
-from .config import Config
-from .logger import Logger
-from .models import *  # pylint: disable=wildcard-import
+from config import Config
+from logger import Logger
+from models import *  # pylint: disable=wildcard-import
 
 
 class Database:
-    def __init__(self, logger: Logger, config: Config, uri="sqlite:///data/crypto_trading.db"):
+    def __init__(self, logger: Logger, config: Config, uri="sqlite:///C:/Users/DRebegea/Documents/trust/binance-trade-bot/data/crypto_trading.db"):
         self.logger = logger
         self.config = config
         self.engine = create_engine(uri)

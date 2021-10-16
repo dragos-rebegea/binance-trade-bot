@@ -3,8 +3,8 @@ from datetime import datetime
 from sqlalchemy import Column, DateTime, ForeignKey, Integer, String
 from sqlalchemy.orm import relationship
 
-from .base import Base
-from .coin import Coin
+from binance_trade_bot.models.base import Base
+from binance_trade_bot.models.coin import Coin
 
 
 class CurrentCoin(Base):  # pylint: disable=too-few-public-methods

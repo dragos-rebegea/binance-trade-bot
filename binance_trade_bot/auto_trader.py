@@ -3,11 +3,11 @@ from typing import Dict, List
 
 from sqlalchemy.orm import Session
 
-from .binance_api_manager import BinanceAPIManager
-from .config import Config
-from .database import Database
-from .logger import Logger
-from .models import Coin, CoinValue, Pair
+from binance_api_manager import BinanceAPIManager
+from config import Config
+from database import Database
+from logger import Logger
+from models import Coin, CoinValue, Pair
 
 
 class AutoTrader:

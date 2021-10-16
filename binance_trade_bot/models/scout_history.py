@@ -4,8 +4,8 @@ from sqlalchemy import Column, DateTime, Float, ForeignKey, Integer, String
 from sqlalchemy.ext.hybrid import hybrid_property
 from sqlalchemy.orm import relationship
 
-from .base import Base
-from .pair import Pair
+from binance_trade_bot.models.base import Base
+from binance_trade_bot.models.pair import Pair
 
 
 class ScoutHistory(Base):

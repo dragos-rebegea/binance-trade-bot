@@ -9,10 +9,10 @@ from flask_socketio import SocketIO, emit
 from sqlalchemy import func
 from sqlalchemy.orm import Session
 
-from .config import Config
-from .database import Database
-from .logger import Logger
-from .models import Coin, CoinValue, CurrentCoin, Pair, ScoutHistory, Trade
+from config import Config
+from database import Database
+from logger import Logger
+from models import Coin, CoinValue, CurrentCoin, Pair, ScoutHistory, Trade
 
 app = Flask(__name__)
 cors = CORS(app, resources={r"/api/*": {"origins": "*"}})

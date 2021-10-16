@@ -1,12 +1,12 @@
 #!python3
 import time
 
-from .binance_api_manager import BinanceAPIManager
-from .config import Config
-from .database import Database
-from .logger import Logger
-from .scheduler import SafeScheduler
-from .strategies import get_strategy
+from binance_trade_bot.binance_api_manager import BinanceAPIManager
+from binance_trade_bot.config import Config
+from binance_trade_bot.database import Database
+from binance_trade_bot.logger import Logger
+from binance_trade_bot.scheduler import SafeScheduler
+from strategies import get_strategy
 
 
 def main():
@@ -23,6 +23,9 @@ def main():
         logger.error("Couldn't access Binance API - API keys may be wrong or lack sufficient permissions")
         logger.error(e)
         return
+    exchange_info = manager.binance_client.get_exchange_info()
+    for s in exchange_info['symbols']:
+        print(s['symbol'])
     strategy = get_strategy(config.STRATEGY)
     if strategy is None:
         logger.error("Invalid strategy name")

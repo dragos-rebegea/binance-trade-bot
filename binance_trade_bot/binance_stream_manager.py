@@ -8,8 +8,8 @@ import binance.client
 from binance.exceptions import BinanceAPIException, BinanceRequestException
 from unicorn_binance_websocket_api import BinanceWebSocketApiManager
 
-from .config import Config
-from .logger import Logger
+from config import Config
+from logger import Logger
 
 
 class BinanceOrder:  # pylint: disable=too-few-public-methods
